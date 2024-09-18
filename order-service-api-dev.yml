@@ -1,0 +1,27 @@
+spring:
+  appplication:
+    name: 'order-service-api'
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibenate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  datasource:
+    url: ''
+    username: ''
+    password: ''
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connection-timeout: 20000
+
+springdoc:
+  openapi:
+    info:
+      title: 'Order Service API'
+      decription: 'Api reponsible for managing service orders"
+      version: '1.0.0'
+
+server:
+  port: ${SERVER_PORT:8100}
+        
